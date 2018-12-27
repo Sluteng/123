@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1</title>
+	<style type="text/css">
+	.box2{ 
+        perspective: 800px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+	}
+	.box1{
+		width: 100px;
+		transform-style: preserve-3d;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -50px;
+		margin-top: -50px;
+		/*perspective-origin: bottom;*/
+		/*transform: rotateX(50deg) rotateY(360deg);*/
+	    animation:bbb linear 5s infinite;
+	 }
+	@keyframes bbb  {
+		from {
+			transform: rotateX(15deg) rotateY(0deg);
+			/*perspective-origin: bottom;仰视*/
+		 }
+		to { 
+			transform: rotateX(15deg) rotateY(360deg); 
+		}
+	}
+	.a,.b,.c,.d,.e,.f{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			/*opacity:0.8;*/
+		}
+		.a{
+			background-color: red;
+			transform:  rotateX(90deg) translateZ(50px);
+		}
+		.b{
+			background-color: blue;
+			transform:  rotateY(-90deg) translateZ(50px);
+		}
+		.c{
+			background-color:green;
+			transform:  rotateY(90deg) translateZ(50px);
+		}
+		.d{
+			background-color: yellow;
+			transform:  translateZ(-50px);
+		}
+		.e{
+			background-color: #DA0DD4;
+			transform:  rotateX(-90deg) translateZ(50px);
+		}
+		.f{
+			background-color:#09C59D;
+			transform:  translateZ(50px);
+		}
+	.box{
+	   width: 300px;
+	   position: absolute;
+	   left: 50%;
+	   top: 50%;
+	   margin-left: -150px;
+	   margin-top: -150px;
+	   transform-style: preserve-3d;
+	   animation: aaa linear 5s infinite; 
+	}
+	@keyframes aaa  {
+		from {
+			transform: rotateX(15deg) rotateY(0deg);
+
+		 }
+		to { 
+			transform: rotateX(15deg) rotateY(360deg); 
+		}
+	}
+	.g,.h,.i,.j,.k,.l{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		background-color: #ccc;
+		opacity: 0.5;
+	}
+	.box:hover .g{
+		transform: rotateX(-90deg) translateZ(300px);
+	}
+	.box:hover .h{
+		transform:  rotateY(90deg) translateZ(300px);
+	}
+	.box:hover .i{
+		 transform:  rotateY(-90deg)  translateZ(300px);
+	}
+	.box:hover .j{
+		 transform:  translateZ(-300px);
+	}
+	.box:hover .k{
+		transform:  rotateX(90deg) translateZ(300px);
+	}
+	.box:hover .l{
+		transform:  translateZ(300px);
+	}
+     .g{
+     /*background-color:red;*/
+     transform:  rotateX(-90deg) translateZ(150px);
+     animation: gg linear 1s  infinite alternate;
+     }
+     .h{
+     /*background-color: blue;*/
+     transform:  rotateY(90deg) translateZ(150px);
+     animation: hh linear 1s infinite alternate;
+     }
+     .i{
+     /*background-color:yellow;*/
+     transform:  rotateY(-90deg)  translateZ(150px);
+     animation: ii linear 1s  infinite alternate ;
+     }
+     .j{
+     /*background-color:green;*/
+     transform:  translateZ(-150px);
+     animation:jj linear 1s infinite alternate ;
+     }
+     .k{
+     /*background-color:pink;*/
+     transform:  rotateX(90deg) translateZ(150px);
+     position: absolute;
+     animation:kk linear 1s  infinite alternate ;
+     }
+     .l{
+     /*background-color: #ccc;*/
+     transform:  translateZ(150px);
+      animation:ll linear 1s  infinite alternate ;
+     }
+	</style>
+</head>
+<body>
+		<div class="box2">
+		<div class="box1">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+			<div class="d"></div>
+			<div class="e"></div>
+			<div class="f"></div>
+		</div>
+		<div class="box">
+			<div class="g"></div>
+			<div class="h"></div>
+			<div class="i"></div>
+			<div class="j"></div>
+			<div class="k"></div>
+			<div class="l"></div>
+		</div>
+	    </div>
+</body>
+</html>
